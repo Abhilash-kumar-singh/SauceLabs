@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "@wdio/cli": "^8.27.1",
+    "appium": "^2.0.1",
+    "appium-doctor": "^1.16.2"
+  },
+  "name": "saucelabs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wdio": "wdio run ./wdio.conf.js",
+    "wdio:batch1": "wdio run ./wdio.batch1.conf.js",
+    "wdio:batch2": "wdio run ./wdio.batch2.conf.js",
+    "wdio:ios": "wdio run ./wdio.ios.conf.js",
+    "wdio:bs:ios": "wdio run ./wdio.bs.ios.conf.js",
+    "wdio:parallel": "parallelshell 'npm run wdio:batch1' 'npm run wdio:batch2'"
+  },
+  "author": "Abhilash",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@wdio/appium-service": "^8.27.0",
+    "@wdio/browserstack-service": "^8.28.8",
+    "@wdio/cucumber-framework": "^8.28.8",
+    "@wdio/local-runner": "^8.27.0",
+    "@wdio/mocha-framework": "^8.27.0",
+    "@wdio/spec-reporter": "^8.27.0",
+    "appium-uiautomator2-driver": "^2.37.0",
+    "appium-xcuitest-driver": "^5.12.2"
+  }
+}
