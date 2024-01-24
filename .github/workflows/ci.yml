@@ -17,3 +17,6 @@ jobs:
             BS_KEY: ${{secrets.BS_KEY}}
           run: npx wdio wdio.bs.android.*
         - uses: actions/upload-artifact@v1
+          with:
+            name: allure-report
+            path: ./allure-report
