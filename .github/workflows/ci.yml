@@ -16,8 +16,6 @@ jobs:
             BS_USER: ${{secrets.BS_USER}}
             BS_KEY: ${{secrets.BS_KEY}}
           run: npx wdio wdio.bs.android.*
-        - name: Generate report
-          run: npx allure generate ./allure-results --clean
         - uses: actions/upload-artifact@v1
           if: failure()
           with:
