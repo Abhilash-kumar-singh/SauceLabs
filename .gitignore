@@ -1,3 +1,9 @@
 node_modules
 local_logs
 logs
+BrowserStack
+.env
+allure-report
+allure-results
+browserstack.err
+local.log

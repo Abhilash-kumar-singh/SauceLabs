@@ -2,8 +2,9 @@ const {config}= require('./wdio.conf')
 const path = require('path');
 
 config.specs=[
-    './test/specs/ios.e2e.js'
+    './test/specs/test.e2e.js'
 ];
+config.services=['appium']
 config.capabilities=[
     {
         platformName: 'Android',
@@ -13,10 +14,19 @@ config.capabilities=[
         'appium:app':path.join(process.cwd(),"./app/SauceLabs.apk"),
         'appium:appActivity': '.SplashActivity',
         'appium:appPackage': 'com.swaglabsmobileapp',
-        port:4000,
-        "appium:systemPort":4001
+        
+    },
+    {
+        "platformName": "Android",
+        "appium:platformVersion": "10",
+        "appium:app": path.join(process.cwd(),"./app/SauceLabs.apk"),
+        "appium:deviceName": "Nexus 5",
+        "appium:automationName": "UiAutomator2",
+        "appium:appActivity": ".SplashActivity",
+        "appium:appPackage": "com.swaglabsmobileapp",
+        
     }
 ];
-// config.port= 4724;
+config.port= 4723;
 
 exports.config=config;

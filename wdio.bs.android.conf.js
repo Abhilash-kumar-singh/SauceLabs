@@ -1,4 +1,5 @@
 const {config}= require('./wdio.conf')
+require('dotenv').config()
 
 config.hostname='hub.browserstack.com'
 config.specs=[
@@ -14,8 +15,8 @@ config.services= [
       },
     ]
   ],
-config.user='abhilashsingh_W8VPYC'
-config.key='4EcpERwBXDhfhzEkvySx'
+config.user=process.env.BS_USER
+config.key=process.env.BS_KEY
 config.capabilities=[{
     'bstack:options': {
       deviceName: 'Google Pixel 3',

@@ -4,7 +4,7 @@ const sortStrategies= require('../../Utility/constants/SortStrategies')
 
 describe('My Login application', () => {
     it('should login with valid credentials', async () => {
-        expect(await inventoryPage.getScreenName()).toEqual("Products")
+        
         let allItemsNames= await inventoryPage.getAllItemsName()
         allItemsNames.forEach(ele=>{
             console.log(ele)

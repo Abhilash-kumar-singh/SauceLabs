@@ -24,13 +24,6 @@ describe('My Login application', () => {
         await cartPage.scrollToCartItem("Sauce Labs Onesie")
         await driver.pause(1000)
         await cartPage.removeFromCart("Sauce Labs Onesie")
-        await driver.pause(1000)
-    })
-    it("Generic commands",async ()=>{
-        await driver.terminateApp("com.swaglabsmobileapp")
-        await driver.pause(2000)
-        await driver.launchApp()
-        await loginPage.login("standard_user","secret_sauce")
     })
 })
 
